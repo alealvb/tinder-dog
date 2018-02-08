@@ -16,7 +16,7 @@ export default class App extends React.Component {
   }
 
   changeToDislike = i => {
-    const likes = this.state.likes.filter((img, index) => index != i);
+    const likes = this.state.likes.filter((...params) => params[1] != i);
     const dislikes = [ this.state.likes[i], ...this.state.dislikes]
     this.setState({likes, dislikes});
   }
